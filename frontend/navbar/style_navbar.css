@@ -1,0 +1,152 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+}
+
+/* Navbar container */
+nav {
+  background: #c00;
+  color: white;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+}
+
+.navbar {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+}
+
+/* Links */
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navbar ul li {
+  position: relative;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.5rem 0.7rem;
+  transition: background 0.3s ease;
+  border-radius: 4px;
+}
+
+.navbar a:hover {
+  background: rgba(255,255,255,0.2);
+}
+
+/* Dropdown */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background: white;
+  color: #333;
+  min-width: 150px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  border-radius: 6px;
+  top: 100%;
+  left: 0;
+  padding: 0.5rem 0;
+}
+
+.dropdown-content a {
+  color: #333;
+  padding: 0.5rem 1rem;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background: #c00;
+  color: white;
+}
+
+.navbar ul li:hover > .dropdown-content {
+  display: block;
+}
+
+/* Foto de perfil */
+.profile-pic img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+/* Espaço do conteúdo */
+main {
+  padding: 80px 20px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Hamburger Menu */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.menu-toggle .bar {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  border-radius: 2px;
+}
+
+/* Responsivo */
+@media (max-width: 700px) {
+  .menu-toggle {
+    display: flex !;
+  }
+
+  .navbar ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    margin-top: 0.5rem;
+  }
+
+  .navbar ul.active {
+    display: flex;
+  }
+
+  .dropdown-content {
+    position: static;
+    box-shadow: none;
+    background: #f9f9f9;
+    margin: 0.2rem 0;
+  }
+
+  .navbar a {
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+  }
+
+  .nav-right {
+    width: 100%;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
