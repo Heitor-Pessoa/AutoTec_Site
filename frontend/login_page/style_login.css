@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #f8f8f8;
+}
+
+.container {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 15px;
+    max-width: 350px;
+    width: 90%;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.logo {
+    width: 120px;
+    margin-bottom: 1rem;
+}
+
+h1 {
+    color: #c00;
+    font-size: 1.5rem;
+    margin-bottom: .5rem;
+}
+
+p {
+    margin-bottom: 1rem;
+    color: #555;
+}
+
+.social-login {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 1rem;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.google-btn {
+    background: #DB4437;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+}
+.google-btn:hover {
+    background: #b6372c;
+}
+
+
+.apple-btn, .ms-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.apple-btn {
+    background: black;
+    color: white;
+}
+
+.ms-btn {
+    background: #2F2FDC;
+    color: white;
+}
+
+.guest-btn {
+    background: #888;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+}
+.guest-btn:hover {
+    background: #666;
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.btn-login {
+    background: #c00;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.forgot-password {
+    display: block;
+    margin-top: 10px;
+    font-size: 12px;
+    color: #c00;
+    text-decoration: none;
+}
+
+.register-user {
+    display: block;
+    margin-top: 10px;
+    font-size: 12px;
+    color: #c00;
+    text-decoration: none;
+}
+
+@media (max-width: 500px) {
+    .container {
+        padding: 1.5rem;
+    }
+}
