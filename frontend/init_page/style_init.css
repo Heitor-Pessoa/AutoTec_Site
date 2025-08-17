@@ -1,0 +1,126 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+}
+
+/* Navbar container */
+nav {
+  background: #c00;
+  color: white;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+}
+
+.navbar {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+}
+
+/* Lista principal da navbar */
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navbar ul li {
+  position: relative;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.5rem 0.7rem;
+  display: inline-block;
+  transition: background 0.3s ease;
+  border-radius: 4px;
+}
+
+.navbar a:hover {
+  background: rgba(255,255,255,0.2);
+}
+
+/* Dropdown menu */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background: white;
+  color: #333;
+  min-width: 150px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  border-radius: 6px;
+  top: 100%;
+  left: 0;
+  padding: 0.5rem 0;
+  z-index: 1500;
+}
+
+.dropdown-content a {
+  color: #333;
+  padding: 0.5rem 1rem;
+  font-weight: 400;
+  display: block;
+  border-radius: 0;
+}
+
+.dropdown-content a:hover {
+  background: #c00;
+  color: white;
+}
+
+/* Mostrar dropdown ao passar mouse */
+.navbar ul li:hover > .dropdown-content {
+  display: block;
+}
+
+/* Espaço do conteúdo pra não ficar escondido atrás da navbar fixa */
+main {
+  padding: 80px 20px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Responsivo simples */
+@media (max-width: 700px) {
+  .navbar ul {
+    flex-direction: column;
+    gap: 0;
+  }
+  .navbar ul li {
+    width: 100%;
+  }
+  .navbar a {
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+    display: block;
+  }
+  .dropdown-content {
+    position: static;
+    box-shadow: none;
+    background: #f9f9f9;
+    border-radius: 0;
+    padding-left: 1.5rem;
+  }
+  .dropdown-content a:hover {
+    background: #eee;
+    color: #c00;
+  }
+  .navbar ul li:hover > .dropdown-content {
+    display: block;
+  }
+}
